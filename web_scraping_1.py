@@ -2,7 +2,7 @@
 Web Scraping and HTML Basics
 Demonstrating various web scraping features for educational purposes...
 This code is part of the IBM Data Engineering Professional Certificate course on Coursera
-
+© IBM Corporation. All rights reserved.
 """
 
 # Required Libraries
