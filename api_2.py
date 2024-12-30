@@ -45,3 +45,5 @@ df.to_csv('./Largest_economies.csv', index=False)
 
 # Display a confirmation message
 print("The DataFrame has been successfully saved to 'Largest_economies.csv'")
+
+# Note: This script processes GDP data as part of an exercise in the IBM Data Engineering Professional Certificate course.
