@@ -28,7 +28,20 @@ df = df.iloc[1:11, :]
 # Step 5: Assign column names as "Country" and "GDP (Million USD)"
 df.columns = ['Country', 'GDP (Million USD)']
 
-# Step 6: Display the final dataframe
-print(df)
+# Step 6: Change the data type of the 'GDP (Million USD)' column to integer
+df['GDP (Million USD)'] = df['GDP (Million USD)'].astype(int)
 
-# Note: This script processes GDP data as part of an exercise in the IBM Data Engineering Professional Certificate course.
+# Step 7: Convert the GDP value in Million USD to Billion USD
+df['GDP (Million USD)'] = df['GDP (Million USD)'] / 1000
+
+# Step 8: Use numpy.round() method to round the value to 2 decimal places
+df['GDP (Million USD)'] = np.round(df['GDP (Million USD)'], 2)
+
+# Step 9: Rename the column header from 'GDP (Million USD)' to 'GDP (Billion USD)'
+df.rename(columns={'GDP (Million USD)': 'GDP (Billion USD)'}, inplace=True)
+
+# Step 10: Save the DataFrame to a CSV file named "Largest_economies.csv"
+df.to_csv('./Largest_economies.csv', index=False)
+
+# Display a confirmation message
+print("The DataFrame has been successfully saved to 'Largest_economies.csv'")
